@@ -5,6 +5,7 @@ class PairsController < ApplicationController
       @pairs = Pair.all # Retrieve all pairs from the database
       render json: @pairs
     end
+    
     def new
       @pair = Pair.new
     end
@@ -15,15 +16,9 @@ class PairsController < ApplicationController
       @pair = Pair.new(pair_params)
     
       if @pair.save
-
-        head :no_content
-      else
-        render json: { errors: @pair.errors.full_messages }, status: :unprocessable_entity
-      else
         render json: @pair, status: :created
       else
-        render json: @pair.errors, status: :unprocessable_entity
-
+        render json: { errors: @pair.errors.full_messages }, status: :unprocessable_entity
       end
     end
     
@@ -53,7 +48,7 @@ class PairsController < ApplicationController
       # Get the latest pair records created in the current week
       latest_pairs = Pair.where(week_no: Date.today.cweek)
   
-      # Check if a week has passed since the latest pairs were created
+      # Check iff a week has passed since the latest pairs were created
       if latest_pairs.empty? || latest_pairs.first.created_at < 1.week.ago
         # Get all the students
         students = Student.all
