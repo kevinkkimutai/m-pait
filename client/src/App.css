@@ -1,0 +1,100 @@
+footer {
+    position: fixed;
+    background-color: gray;
+    bottom: 0;
+    display: relative;
+    height: 50px;
+    left: 0;
+    right: 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  }
+  .footer__social-media a {
+    color: #333;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    display: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .footer__social-media a:hover {
+    color: #0077b5;
+  }
+  
+  .footer__social-media i {
+    display: relative;
+  padding-top: 2PX;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #abdcf9;
+    float: center;
+
+  }
+  
+  .footer__social-media i.fa-facebook-f {
+    color: #3b5998;
+  }
+  
+  .footer__social-media i.fa-twitter {
+    color: #1da1f2;
+  }
+  
+  .footer__social-media i.fa-linkedin-in {
+    color: #0077b5;
+  }
+  
+  .footer__social-media i.fa-google {
+    color: #db4437;
+  }
+
+  .footer__logo {
+    float: left;
+  }
+
+  
+  .instructor-pairings {
+    margin: 2rem 0;
+  }
+  
+  .instructor-pairings h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .instructor-pairings ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .instructor-pairings li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .instructor-pairings button {
+    margin-top: 1rem;
+  }
+  .instructor-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .instructor-sidebar {
+    width: 200px;
+    
+  }
+  
+  .instructor-main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+
+  
