@@ -19,7 +19,7 @@ class PairsController < ApplicationController
         head :no_content
       else
         render json: { errors: @pair.errors.full_messages }, status: :unprocessable_entity
-
+      else
         render json: @pair, status: :created
       else
         render json: @pair.errors, status: :unprocessable_entity
