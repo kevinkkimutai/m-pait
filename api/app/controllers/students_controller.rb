@@ -4,6 +4,7 @@ class StudentsController < ApplicationController
       # Render student dashboard view
     end
 
+
      #GET /students
      def index
       students = Student.all
@@ -54,7 +55,7 @@ class StudentsController < ApplicationController
    #DELETE /student/{:id}
    def destroy
      student = Student.find_by(id.params[:id])
-     #check if student exists
+     #check iff student exists
      if student
          student.destroy
          head :no_content
@@ -65,7 +66,7 @@ class StudentsController < ApplicationController
  
  private
  def student_params
-     params.permit(:fullname, :grade :user_id )
+     params.permit(:fullname, :grade, :user_id )
  
  end
     
